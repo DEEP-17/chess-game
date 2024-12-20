@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep's Chess
+    </title>
+    <link rel="stylesheet" href="./lib/chessboardjs-1.0.0/css/chessboard-1.0.0.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p id="total_players">Total Players:0</p>
+    <h2 style="text-align: center;">Chess Game</h2>
+    <div id="main-element" class="display-f">
+        <div id="Board1" style="width: 544px"></div>
+        <div id="buttonsparent">
+            <button id="play-stockfish">Play against Stockfish</button>
+            <button data-time="10"class="timer-button">10 min</button>
+            <button data-time="15"class="timer-button">15 min</button>
+            <button data-time="20"class="timer-button">20 min</button>
+            <br>
+        </div>
+        <div id="chat-container" class="chat-container">
+            <div id="chat-box" class="chat-box"></div>
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type a message">
+            <button id="send-button" class="send-button">Send</button>
+        </div>
+    </div>
+    <!-- Add this inside the <body> tag, below the existing elements -->
+
+    <div id="pgn" style="white-space: pre-wrap; font-family: monospace; margin-top: 10px;"></div>
+     <p id="waiting_text" class="display-none">Waiting for opponent to join...</p>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js" integrity="sha512-xRllwz2gdZciIB+AkEbeq+gVhX8VB8XsfqeFbUh+SzHlN96dEduwtTuVuc2u9EROlmW9+yhRlxjif66ORpsgVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./lib/chessboardjs-1.0.0/js/chessboard-1.0.0.min.js"></script>
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js" integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="stockfish.js"></script>
+</body>
+</html>
